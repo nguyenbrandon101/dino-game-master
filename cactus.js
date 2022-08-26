@@ -21,10 +21,10 @@ export function setupCactus() {
     })
 }
 
-///// understand
+
 export function updateCactus(delta,speedScale) {
     // selects all the cactus
-    document.querySelectorAll("[data-cactus").forEach(cactus => {
+    document.querySelectorAll("[data-cactus]").forEach(cactus => {
         //moves the cactus speed
         incrementCustomProperty(cactus,"--left", delta*speedScale*SPEED * -1)
         // checks if cactus us way off to the left of our screen then we remove it
@@ -42,9 +42,8 @@ export function updateCactus(delta,speedScale) {
     nextCactusTime -= delta
 }
 
-////// understand
 // getting dimensions of cactus, gets the rectangles of all cactus on screen
-
+// returns left, top, right, bottom, x, y, width, and height
 export function getCactusRects() {
     return [...document.querySelectorAll("[data-cactus]")].map(cactus => {
       return cactus.getBoundingClientRect()

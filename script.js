@@ -88,7 +88,7 @@ function setPixelToWorldScale() {
     // .some tells us if any of these cactus return true then we would want to return true
     return getCactusRects().some(rect => isCollision(rect,dinoRect))
   }
-//// understand
+
   // checks if the rectangles overlap
   function isCollision(rect1, rect2) {
     return (

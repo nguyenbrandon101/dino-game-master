@@ -34,7 +34,6 @@ export function updateDino(delta,speedScale) {
     handleJump(delta)
 }
 
-///// understand
 export function getDinoRect() {
     return dinoElem.getBoundingClientRect()
 }
